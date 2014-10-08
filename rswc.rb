@@ -52,6 +52,7 @@ def lvl1(lvl)
 		end
 	end
 	total_log = 0
+	current_log = 0
 	while total_log < 97	
 	puts "Are you ready to cut trees? (Y/N) "
 	print = "> "
@@ -63,6 +64,7 @@ def lvl1(lvl)
 			sleep 1
 			
 			add_log = cutting_trees
+			test = cutting_trees				
 			total_log += add_log
 			current_log += add_log
 			puts "You have #{current_log} logs"
