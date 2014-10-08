@@ -1,4 +1,4 @@
-	# In this game I am making a simulator of cutting trees in runescape up to lvl 99
+# In this game I am making a simulator of cutting trees in runescape up to lvl 99
 # Will try to make exact to tree standard count somethinsgs
 
 puts "Welcome to my Wood Cutting Game! "
@@ -20,6 +20,23 @@ def cutting_trees
 		sleep rand(1..5) 
 	end	
 	return profit	
+end
+
+def bank
+	puts "Oh Dear! We are full of logs ;( "
+	puts "Lets walk back to the bank and deposit"
+	(0..40).each do |i|
+		if i == 20
+			puts "Depositing"
+			sleep 3
+		elsif i > 20
+			puts "Walking back"
+			sleep 1
+		else 
+			puts "Walking "
+			sleep 1
+		end
+	end
 end
 
 def lvl1(lvl)
@@ -46,10 +63,20 @@ def lvl1(lvl)
 			sleep 1
 			
 			add_log = cutting_trees
-			log += add_log
+			total_log += add_log
+			current_log += add_log
+			puts "You have #{log} logs"
+			
+			if current_log >= 27
+				bank
+				current_log = 0
+			end
 		elsif ready == "N" || ready == "n"
 			wait_time = 5
-			wait(wait_time)
+			(0..5).each do
+				puts "wait..."
+				sleep 1
+			end
 		else
 			puts "Y / N PLS"
 		end
