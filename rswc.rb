@@ -1,4 +1,4 @@
-# In this game I am making a simulator of cutting trees in runescape up to lvl 99
+	# In this game I am making a simulator of cutting trees in runescape up to lvl 99
 # Will try to make exact to tree standard count somethinsgs
 
 puts "Welcome to my Wood Cutting Game! "
@@ -24,7 +24,7 @@ end
 
 def lvl1(lvl)
 	puts "Ok lets walk to Draynor VIllage and cut some trees!!! :) "
-	(0..1).each do |i|
+	(0..30).each do |i|
 		if i  == 15
 			puts "Halfway there! "
 			sleep 1
@@ -33,18 +33,28 @@ def lvl1(lvl)
 			sleep 1
 			puts "Walking"
 		end
-	end	
-	puts "Now that we are here are you ready to cut trees? (Y/N) "
+	end
+	log = 0
+	while log < 97	
+	puts "Are you ready to cut trees? (Y/N) "
 	print = "> "
 	ready = $stdin.gets.chomp
-	if ready == "Y" || ready == "y"
-		logs = cutting_trees
-	elsif ready == "N" || ready == "n"
-		wait_time = 5
-		wait(wait_time)
-	else
-		puts "Y / N PLS"
+		if ready == "Y" || ready == "y"
+			puts "Walking.."
+			sleep 1
+			puts "Walking.."
+			sleep 1
+			
+			add_log = cutting_trees
+			log += add_log
+		elsif ready == "N" || ready == "n"
+			wait_time = 5
+			wait(wait_time)
+		else
+			puts "Y / N PLS"
+		end
 	end
+	puts "You are now lvl 15"
 end
 
 
