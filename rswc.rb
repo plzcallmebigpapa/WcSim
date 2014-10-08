@@ -63,8 +63,7 @@ def lvl1(lvl)
 			puts "Walking.."
 			sleep 1
 			
-			add_log = cutting_trees
-			test = cutting_trees				
+			add_log = cutting_trees				
 			total_log += add_log
 			current_log += add_log
 			puts "You have #{current_log} logs"
