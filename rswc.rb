@@ -51,7 +51,7 @@ def lvl1(lvl)
 			puts "Walking"
 		end
 	end
-	log = 0
+	total_log = 0
 	while total_log < 97	
 	puts "Are you ready to cut trees? (Y/N) "
 	print = "> "
