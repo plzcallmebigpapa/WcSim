@@ -52,7 +52,7 @@ def lvl1(lvl)
 		end
 	end
 	log = 0
-	while log < 97	
+	while total_log < 97	
 	puts "Are you ready to cut trees? (Y/N) "
 	print = "> "
 	ready = $stdin.gets.chomp
@@ -65,7 +65,8 @@ def lvl1(lvl)
 			add_log = cutting_trees
 			total_log += add_log
 			current_log += add_log
-			puts "You have #{log} logs"
+			puts "You have #{current_log} logs"
+			puts "And #{total_log} in da bank"
 			
 			if current_log >= 27
 				bank
